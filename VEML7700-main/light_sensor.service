@@ -1,0 +1,14 @@
+
+[unit]
+Description= Execute light sensor code
+StartLimitIntervalSec=30
+StartLimitBurst=2
+
+
+[Service]
+ExecStart=/usr/sbin/sensor_code/light_intensity
+Restart=on-failure
+
+
+[Install]
+WantedBy=multi-user.target

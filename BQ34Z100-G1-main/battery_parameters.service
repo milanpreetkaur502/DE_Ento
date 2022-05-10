@@ -1,0 +1,14 @@
+
+[Unit]
+Description = battery parameter monitoring service
+After = gauge_configure.service
+StartLimitIntervalSec=30
+StartLimitBurst=2
+
+
+[Service]
+ExecStart = /usr/sbin/sensor_code/battery_parameters
+Restart=on-failure
+
+[Install]
+WantedBy = multi-user.target

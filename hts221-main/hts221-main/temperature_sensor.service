@@ -1,0 +1,13 @@
+
+[unit]
+Description= Temperature and humidity sensor service
+StartLimitIntervalSec=30
+StartLimitBurst=2
+
+
+[Service]
+ExecStart=/usr/sbin/sensor_code/TH_reading
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
